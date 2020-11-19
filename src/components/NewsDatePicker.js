@@ -40,21 +40,23 @@ class NewsDatePicker extends React.Component {  
     
     render() { 
         return (
-            <DatePicker
-                placeholderText="Select Date"        
-                selected={this.state.startDate}        
-                onChange={this.handleChange}      
-            />
-            // <DatesRangeInput
-            //   name="datesRange"
-            //   placeholder="Select From - To"
-            //   value={this.state.datesRange}
-            //   iconPosition="left"
-            //   onChange={this.handleChange}
-            //   dateFormat={"MM/DD/YYYY"}
-            //   onBlur={this.blurDates}
-            //   style={{width: 180}}
-            // />
+            <div>
+                <DatePicker
+                    placeholderText="Select Date"        
+                    selected={this.state.startDate}        
+                    onChange={this.handleChange}      
+                />
+                {/* <DatesRangeInput
+                    name="datesRange"
+                    placeholder="Select From - To"
+                    value={this.state.datesRange}
+                    iconPosition="left"
+                    onChange={this.handleChange}
+                    dateFormat={"MM/DD/YYYY"}
+                    onBlur={this.blurDates}
+                    style={{width: 180}}
+                /> */}
+            </div>
         );  
     }
 }
