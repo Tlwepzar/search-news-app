@@ -39,18 +39,18 @@ class App extends React.Component {
     return (
       <Container>
         <Header as="h2" style={{ textAlign: "center", margin: 20 }}>
-          DotModus News App 🌐 
+          DotModus News App{" "}<span role="img" aria-label="globe"> 🌐 </span>
         </Header>
         <SearchBar searchForTopic={this.searchForTopic} />
         {loading && (
           <p style={{ textAlign: "center" }}>Searching for articles...</p>
         )}
-        {articles.length > 0 && (
+        {articles && articles.length > 0 && (
           <Header as="h4" style={{ textAlign: "center", margin: 20 }}>
             Found {totalResults} articles on "{searchTopic}"
           </Header>
         )}
-        {articles.length > 0 && <ArticleList articles={articles} />}
+        {articles && articles.length > 0 && <ArticleList articles={articles} />}
         {apiError && <p>Could not fetch any articles. Please try again.</p>}
       </Container>
     );

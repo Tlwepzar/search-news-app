@@ -5,7 +5,7 @@ import NewsDatePicker from './NewsDatePicker';
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { searchTopic: "news" };
+    this.state = { searchTopic: "" };
   }
   
   handleChange = event => {
